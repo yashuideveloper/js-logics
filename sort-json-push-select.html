@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+
+<body>
+    <select name="car" id="cars">
+    </select>
+    <script>
+    // var obj = {name: 10};
+
+    // function myFunction(a, b, c){
+    // 	return this.name + a + " " + b + " " + c;
+    // }
+
+    // var args = ["Newtown","KOLKATA","WB"];
+
+
+    // console.log(myFunction.apply(obj, args));
+
+    // catName("Chloe");
+
+    // 	function catName(name) {
+    // 	  console.log("My cat's name is " + name);
+    // 	}
+
+
+    // function getUnique(array) {
+    //     var uniqueArray = [];
+
+    //     for (i = 0; i < array.length; i++) {
+    //         if (uniqueArray.indexOf(array[i]) === -1) {
+    //             uniqueArray.push(array[i]);
+    //         }
+    //     }
+    //     return uniqueArray;
+    // }
+
+    // var names = ["John", "Peter", "Clark", "Harry", "John", "Alice", "Harry"];
+    // var uniqueNames = getUnique(names);
+    // console.log(uniqueNames); 
+
+    // let a = [1,2,3,2,3,1,4,2,6];
+    // let b = [];
+
+    // let len = a.length;
+
+    // for(let i = 0; i < len; i++){
+    // 	if(b.indexOf(a[i]) === -1){
+    // 		b.push(a[i]);
+    // 	}
+    // }
+
+    let arr1 = [
+        { id: 1, name: "a" },
+        { id: 3, name: "c" },
+        { id: 2, name: "b" },
+        { id: 6, name: "t" }
+    ];
+
+    const arr2 = arr1.sort(function(a, b) {
+        return a.id - b.id;
+        // console.log(a.id + " - " + b.id);    	
+    });
+
+
+    var domEl = document.getElementById("cars");
+    
+    for (let i = 0; i < arr2.length; i++) {
+        let opt = document.createElement("option");
+        opt.setAttribute("value", arr2[i].name);
+        domEl.appendChild(opt).innerHTML = arr2[i].name;
+    }
+
+
+    console.log(arr2);
+
+    console.log(domEl.options[1].setAttribute('selected', true));
+    </script>
+</body>
+
+</html>
