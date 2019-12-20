@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+// 		var john = {
+//     name: 'John',
+//     age: 26,
+//     job: 'teacher',
+//     presentation: function(style, timeOfDay) {
+//         if (style === 'formal') {
+//             console.log('Good ' + timeOfDay + ', Ladies and gentlemen! I\'m ' +  this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old.');
+//         } else if (style === 'friendly') {
+//             console.log('Hey! What\'s up? I\'m ' +  this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay + '.');
+//         }
+//     }
+// };
+
+// var emily = {
+//     name: 'Emily',
+//     age: 35,
+//     job: 'designer'
+// };
+
+// john.presentation('formal', 'morning');
+
+// john.presentation.call(emily, 'friendly', 'afternoon');
+
+// john.presentation.apply(emily, ['friendly', 'afternoon']);
+
+// var johnFriendly = john.presentation.bind(john, 'friendly');
+
+// johnFriendly('morning');
+// johnFriendly('night');
+
+// var emilyFormal = john.presentation.bind(emily, 'formal');
+// emilyFormal('afternoon');
+
+//------------------------------------------------------------------
+
+
+// var arr1 = "john".split('');
+// var arr2 = arr1.reverse();
+// var arr3 = "jones".split('');
+
+// arr2.push(arr3);
+
+// console.log(arr1.length);
+// console.log(arr2.length);
+
+// console.log(arr1.slice(-1));
+// console.log(arr2.slice(-1));
+// console.log("arr1 : " + arr1.length);
+// console.log("arr2 : " + arr2.length);
+// console.log("arr3 : " + arr3);
+
+// var a = "johnes";
+// var a = [1,2,3,4,5];
+// console.log(a.splice(0, 3, 'a'));
+
+// console.log(a)
+
+//------------------------------------------------------------------
+
+
+// (function(){
+// console.log("1");
+
+// setTimeout(function(){console.log("2")}, 2000);
+// setTimeout(function(){
+// console.log("3");
+// },0)
+
+// console.log('4');
+
+// })();
+
+
+//------------------------------------------------------------------
+
+// for (var i =0; i<5; i++){
+    // var btn = document.createElement('button');
+    // btn.appendChild(document.createTextNode('Button ' + i));
+    // btn.addEventListener('click', function() {console.log(i); });
+    // document.body.appendChild(btn);
+     // }
+
+//------------------------------------------------------------------
+
+     // var hero = {
+     //    _name: 'Johny Depp',
+
+     //    getIdentity: function() {
+     //        return this._name;
+     //    }
+     // }
+
+     // var heroidentity = hero.getIdentity;
+
+     // console.log(heroidentity());
+     // console.log(hero.getIdentity());
+
+//------------------------------------------------------------------
+
+// console.log(1 + "2" + "2");
+// console.log(1 + +"2" + "2");
+// console.log(+"1" + "1" + "2");
+// console.log("A" - "B" + "2");
+
+//---------------------------------------------------------------------
+
+// var myObject = {
+//     foo: "bar",
+
+//     func: function(){
+//         var self = this;
+
+//         console.log(this.foo);
+//         console.log(self.foo);
+
+//         (function(){
+//             console.log(this.foo);
+//             console.log(self.foo);
+//         })();
+//     }
+// }
+
+// myObject.func();
+
+//-------------------------------------------------------------------------
+
+
+
+    </script>
+</body>
+
+</html>
