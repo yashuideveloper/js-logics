@@ -1,0 +1,63 @@
+import React, { useState } from "react";
+import "./styles.css";
+export default function App() {
+  const initialState = ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5"];
+  const [pending, setPending] = useState(initialState);
+  const [progress, setProgress] = useState([]);
+  const [completed, setCompleted] = useState([]);
+  const handlePending = (val, i) => {
+    console.log(val, i);
+    const temp = [...pending];
+    const remove = temp.splice(i, 1);
+    setPending(temp);
+    setProgress([...remove, ...progress]);
+  };
+  const handleProgress = (val, i) => {
+    const temp = [...progress];
+    const remove = temp.splice(i, 1);
+    setProgress(temp);
+    setCompleted([...remove, ...completed]);
+  };
+  return (
+    <div className="App">
+      <p>
+        You have 5 tasks in Pending State, When onclick, the particular task
+        should move to Inprogress State
+      </p>{" "}
+      <p>
+        If its in Inprogress State, When onclick, the particular task should
+        move to completed state.
+      </p>
+      <h2>Pending Task</h2>{" "}
+      <p>
+        {pending.map((val, index) => {
+          return (
+            <li key={index} onClick={() => handlePending(val, index)}>
+              {val}
+            </li>
+          );
+        })}
+      </p>{" "}
+      <h2>Inprogress Task</h2>
+      <p>
+        {progress.map((val, index) => {
+          return (
+            <li key={index} onClick={() => handleProgress(val, index)}>
+              {val}
+            </li>
+          );
+        })}
+      </p>
+      <h2>Completed Task</h2>
+      <p>
+        {completed.map((val, index) => {
+          return (
+            <li key={index} onClick={() => handlePending(val, index)}>
+              {val}
+            </li>
+          );
+        })}
+      </p>
+    </div>
+  );
+}
